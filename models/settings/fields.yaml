@@ -1,0 +1,106 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    nazwapodmiotu:
+        label: Nazwa podmiotu
+        type: text
+        required: 1
+    nazwastronywww:
+        label: Nazwa strony www
+        type: text
+        span: auto 
+        required: 1
+    adresstronywww:
+        label: Adres strony www wraz z protokołem http:// lub https://
+        type: text
+        span: auto        
+        required: 1        
+    datapublikacjistronywww:
+        label: Data publikacji strony www
+        type: datepicker
+        mode: date
+        span: auto
+        required: 1        
+    dataistotnejaktualizacjistronywww:
+        label: Data ostatniej istotnej aktualizacji strony internetowej
+        type: datepicker
+        mode: date
+        span: auto
+    statuszgodnosci:
+        label: Oświadczenie - status pod względem zgodności 
+        type: dropdown
+        options:
+            - Zgodna
+            - Częściowo zgodna
+            - Niezgodna
+        required: 1            
+    tresciniedostepne:
+        label: Treści niedostępne (jeżeli częściowo zgodna lub niezgodna)
+        type: textarea
+        span: auto
+    wylaczenia:
+        label: Wyłączenia (jeżeli częściowo zgodna lub niezgodna)
+        type: textarea
+        span: auto
+    datasporzadzeniadeklaracji:
+        label: Data sporządzenia deklaracji
+        type: datepicker
+        mode: date
+        span: auto  
+        required: 1        
+    datasostatniegoprzegladu:
+        label: Data ostatniego przeglądu i aktualizacji        
+        type: datepicker
+        mode: date
+        span: auto  
+    deklaracjanapodstawie:
+        label: Deklarację sporządzono na podstawie 
+        type: dropdown
+        options:
+            - Samooceny
+            - Oceny podmiotu zewnętrzenego
+        span: auto              
+        required: 1        
+    raportoceniajacy:
+        label: Adres URL strony internetowej z wynikami raportu
+        type: text
+        span: auto          
+    osobakontaktowa[imienazwisko]:
+        label: Imię i nazwisko osoby kontaktowej
+        type: text
+        required: 1        
+    osobakontaktowa[email]:
+        label: Adres e-mail osoby kontaktowej
+        type: text
+        required: 1        
+    osobakontaktowa[telefon]:
+        label: Telefon osoby kontaktowej
+        type: text
+        required: 1        
+    organodwolawczy[nazwa]:
+        label: Nazwa organu odwoławczego
+        type: text
+        span: auto          
+    organodwolawczy[adres]:
+        label: Adres odwoławczego
+        type: text
+        span: auto          
+    organodwolawczy[email]:
+        label: Adres e-mail organu odwoławczego
+        type: text  
+        span: auto  
+    organodwolawczy[telefon]:
+        label: Telefon organu odwoławczego
+        type: text
+        span: auto          
+    dostepnoscarchitektoniczna:
+        label: Dostępność architektoniczna
+        type: richeditor
+    udogodnienia:
+        label: Udogodnienia
+        type: richeditor
+    inneinformacje:
+        label: Inne informacje i oświadczenia
+        type: richeditor        

@@ -1,0 +1,99 @@
+
+
+<h2 id="a11y-deklaracja">Deklaracja dostępności {{dd.nazwapodmiotu}}</h2>
+<p id="a11y-wstep">
+	<span id="a11y-podmiot">{{dd.nazwapodmiotu}}</span> 
+	zobowiązuje się zapewnić dostępność strony internetowej gov.pl zgodnie z ustawą z dnia 4 kwietnia 2019 r. o dostępności cyfrowej stron internetowych 
+	i aplikacji mobilnych podmiotów publicznych. Oświadczenie w sprawie dostępności ma zastosowanie do 
+	<a id="a11y-url" href="{{dd.adresstronywww}}">serwisu internetowego {{dd.nazwastronywww}}.</a></p>
+<p>Data publikacji strony internetowej: <span id="a11y-publikacja">{{dd.datapublikacjistronywww|date("Y-m-d")}}</span></p>
+<p>Data ostatniej dużej aktualizacji: <span id="a11y-aktualizacja">{{dd.dataistotnejaktualizacjistronywww|date("Y-m-d")}}</span>.</p>
+
+
+<p id="a11y-status">Strona internetowa jest {{statuszgodnosci[dd.statuszgodnosci]|lower}} z ustawą o dostępności cyfrowej stron internetowych i 
+aplikacji mobilnych podmiotów publicznych. </p>
+
+
+{% if dd.statuszgodnosci!=0%}
+	<h3>Treści niedostępne</h3>
+	
+	<p>{{dd.tresciniedostepne}}</p>
+	
+	<h3>Wyłączenia</h3>
+	
+	<p>{{dd.wylaczenia}}</p>
+{% endif %}
+
+
+
+<p>Oświadczenie sporządzono dnia <span id="a11y-sporzadzenie">{{dd.datasporzadzeniadeklaracji|date("Y-m-d")}}</span>. 
+	Deklarację sporządzono na podstawie 
+
+	{% if dd.deklaracjanapodstawie==0 %}
+		samooceny przeprowadzonej przez podmiot publiczny.
+	{% else %}
+		oceny podmiotu zewnętrzenego.
+	{% endif %}
+
+</p>
+
+{%if raportoceniajacy!=''%}
+<p>Pobierz <a href="{{dd.raportoceniajacy}}">Raport z wynikami przeglądu dostępności</a>.</p>
+{% endif %}
+
+
+
+<p>Na stronie internetowej można korzystać ze standardowych skrótów klawiaturowych.</p>
+
+<h3 id="a11y-kontakt">Informacje zwrotne i dane kontaktowe</h3>
+<p>W przypadku <strong>problemów z dostępnością cyfrowej dla osób niepełnosprawnych</strong> strony internetowej prosimy o kontakt. 
+Osobą odpowiedzialną jest <span id="a11y-osoba">{{dd.osobakontaktowa.imienazwisko}}</span>, 
+adres poczty elektronicznej <a id="a11y-email" href="mailto:{{dd.osobakontaktowa.email}}">{{dd.osobakontaktowa.email}}</a>. 
+Kontaktować można się także dzwoniąc na numer telefonu <span id="a11y-telefon">{{dd.osobakontaktowa.telefon}}</span>. 
+Tą samą drogą można składać wnioski o udostępnienie informacji niedostępnej oraz składać skargi na brak zapewnienia dostępności.</p>
+
+
+<p id="a11y-procedura">Każdy ma prawo:</p>
+<ul>
+    <li>zgłosić uwagi dotyczące dostępności cyfrowej strony lub jej elementu,</li>
+    <li>zgłosić żądanie zapewnienia dostępności cyfrowej strony lub jej elementu,</li>
+    <li>wnioskować o udostępnienie niedostępnej informacji w innej alternatywnej formie.</li>
+</ul>
+<p>Żądanie musi zawierać:</p>
+<ul>
+    <li>dane kontaktowe osoby zgłaszającej,</li>
+    <li>wskazanie strony lub elementu strony, której dotyczy żądanie,</li>
+    <li>wskazanie dogodnej formy udostępnienia informacji, jeśli żądanie dotyczy udostępnienia w formie alternatywnej informacji niedostępnej.</li>
+</ul>
+<p>Rozpatrzenie zgłoszenia powinno nastąpić niezwłocznie, najpóźniej w ciągu 7 dni. Jeśli w tym terminie zapewnienie dostępności albo zapewnienie dostępu w alternatywnej formie nie jest możliwe, powinno nastąpić najdalej w ciągu 2 miesięcy od daty zgłoszenia.</p>
+
+<h3>Skargi i odwołania</h3>
+<p>Na niedotrzymanie tych terminów oraz na odmowę realizacji żądania można złożyć skargę do organu nadzorującego pocztą lub drogą elektroniczną na adres:</p>
+<ul>
+<li>Organ nadzorujący: {{dd.organodwolawczy.nazwa}}</li>
+<li>Adres: {{dd.organodwolawczy.adres}}</li>
+<li>E-mail: {{dd.organodwolawczy.email}}</li>
+<li>Telefon: {{dd.organodwolawczy.telefon}}</li>
+</ul>
+<p>Skargę można złożyć również do  <a href="https://www.rpo.gov.pl/content/jak-zglosic-sie-do-rzecznika-praw-obywatelskich">Rzecznika Praw Obywatelskich</a>.</p>
+
+
+
+<h3 id="a11y-architektura">Dostępność architektoniczna</h3>
+
+{{dd.dostepnoscarchitektoniczna}}
+
+
+{% if dd.udogodnienia!=''%}
+	<h3 id="a11y-architektura">Udogodnienia</h3>
+
+	{{dd.udogodnienia}}
+{% endif%}
+
+
+{% if dd.inneinformacje!=''%}
+	<h3 id="a11y-architektura"> Inne informacje i oświadczenia </h3>
+
+	{{dd.inneinformacje}}
+{% endif%}
+
