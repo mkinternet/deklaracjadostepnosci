@@ -26,6 +26,7 @@ class Deklaracjadostepnosci extends ComponentBase
 			];
 		
 
+		$test = [];
 		
         return [];
     }
