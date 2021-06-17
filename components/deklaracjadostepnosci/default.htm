@@ -78,11 +78,11 @@ Tą samą drogą można składać wnioski o udostępnienie informacji niedostęp
 <p>Skargę można złożyć również do  <a href="https://www.rpo.gov.pl/content/jak-zglosic-sie-do-rzecznika-praw-obywatelskich">Rzecznika Praw Obywatelskich</a>.</p>
 
 
+{% if dd.dostepnoscarchitektoniczna!=''%}
+	<h3 id="a11y-architektura">Dostępność architektoniczna</h3>
 
-<h3 id="a11y-architektura">Dostępność architektoniczna</h3>
-
-{{dd.dostepnoscarchitektoniczna|raw}}
-
+	{{dd.dostepnoscarchitektoniczna|raw}}
+{% endif%}
 
 {% if dd.udogodnienia!=''%}
 	<h3 id="a11y-architektura">Udogodnienia</h3>
